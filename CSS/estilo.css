@@ -1,0 +1,122 @@
+/* limpar formatações padrões */
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1em;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background: #e6e6e6;
+}
+
+/*
+**** layout ****
+*/
+
+#area-cabecalho {
+    background-color: #f7b600;
+    padding: 15px; /*espaçamento*/
+    text-align: 15px;
+    text-align: center;
+}
+#area-logo, #area-menu{
+    padding: 10px;
+}
+#area-principal{
+    width: 920px;
+    margin: 0 auto; /* 0sup e inf e automatica esquerda e direita, ou seja o conteudo vai ficar centralizado*/
+    padding: 15px;
+    border: 5px solid red;
+}
+.categorias-espaco{
+    margin: 1;
+}
+#area-postagens{
+    width: 660px;
+    float: left;
+    border: 3px solid red;
+}
+.postagem{
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+    
+}
+.conteudo-lateral{
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#area-lateral{
+    width: 240px;
+    float: right;
+}
+#rodape{
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    background: #CCC;
+}
+.postagem-lateral{
+    font-size: 0.8em;
+    padding: 15px;
+    border-bottom: 1px dotted #CCC;
+    
+}
+/*
+**** Formatações em geral ****
+*/
+
+h1{
+    color: #4e4e4e;
+    font-size: 2.5em;
+}
+h2{
+    color: #f7b600;
+}
+h3{
+    color: #565656;
+    background: #CCC;
+    padding: 5px;
+}
+
+.branco{
+    color: white;
+}
+.data-postagem{
+    font-size: 0.8em;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/*
+**** Formatações do menu ****
+*/
+a{
+    text-decoration: none;
+}
+
+
+a:link, a:visited { /*formatacao padrao para todos os links*/
+    color: #f7b600;
+}
+a:hover{ /*formatacao padrao para todos os links*/
+    text-decoration: underline;
+    color: #f7b600;
+}
+
+#area-cabecalho a:link, #area-cabecalho a:visited { /*vamo formatar os links desse tipo que somente estiverem dentro da area de cabecalho. Só vai aplicar cor e padding para o estado a:link que estiver dentro dessa area de cabecalho e o mesmo para o a:visited */
+    color: #FFF;
+    padding: 8px 12px;
+}
+#area-cabecalho a:hover{
+    color: #f7b600;
+    background: #FFF;
+    border-radius: 1000px;
+    text-decoration: none;
+
+    /* como a formatação padrão é usar o text-decoration:underline para todos os links de estado hover, mesmo se eu não escrevesse ele aqui, é como se ele estivesse escrito e sendo utilizado. Uma regra mais especifica (que é aplicada apenas nos links de estado hover que estao SOMENTE dentro do cabecalho) herndando de uma mais geral (que define o text-decoration como underline) -> efeito cascata -> a regra mais restrita herda da regra mais geral. Por isso que se eu não quiser usar o text-decoration:underline eu preciso especificar dentro desse #area-cabecalho a:hover*/
+}
